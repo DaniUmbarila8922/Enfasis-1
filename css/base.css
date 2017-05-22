@@ -1,0 +1,327 @@
+.oyPanelDiv{
+    text-align: left;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+.oyPuzzleFooter{
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+div#datos{
+    float: left;
+    max-width: 38%;
+    text-align: left;
+    display: inline-block;
+}
+.oyPuzzleFooter{
+    margin: 15px 0;
+}
+.oyListNormal:nth-child(odd) {
+    background-color: rgba(255,255,255,1);
+}
+#oygState{
+    color: #000 !important;
+    font-size: 12px;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    text-align: center;
+    max-width: 320px;
+}
+.oyPuzzleFooter a{
+    display: inline-block;
+}
+.oyPanelDiv span{
+    font-weight: bold;
+}
+.oyPanelDiv span.bien{
+    background-image: url('../img/palomita.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 16px;/* ancho de la imagen más un poco */
+    margin-left: 10px;
+}
+.oyPanelDiv span.mal{
+    background-image: url('../img/tache.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 16px;/* ancho de la imagen más un poco */
+    margin-left: 10px;
+    opacity: 0.75;
+}
+
+.tituloOrientacion{
+    font-weight: bold;
+    text-align: center;
+    background-color: #fff;
+}
+.instrucciones{
+    font-size: 12px;
+    margin: 10px;
+}
+@media screen and (max-width: 900px) {
+    div#datos{
+        float: none;
+        max-width: inherit;
+    }
+    #oygListH{
+        width: 49%;
+        float: left;
+    }
+    #oygListV{
+        width: 49%;
+        float: right;
+    }
+}
+@media screen and (max-width: 515px) {
+    #oygListH{
+        width: 100%;
+        float: none;
+    }
+    #oygListV{
+        width: 100%;
+        float: none;
+    }
+}
+div#oygContext{
+    display: inline-block;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif !important;
+}
+body{
+    text-align: center;
+}
+.oyPuzzleCell {	
+	background-color: #FFFFFF;
+} 
+.oyPuzzle {
+	/*padding: 8px;*/
+	border-collapse: collapse;	
+}
+.ousStateOk {
+	text-align: left;		
+	font-family: "Times New Roman", Times, serif;
+	font-size: medium;
+	color: #008000;
+}
+.ousStateBusy {
+	text-align: left;		
+	font-family: "Times New Roman", Times, serif;
+	font-size: medium;
+	color: #0000FF;
+}
+.ousStateError {
+	text-align: left;		
+	font-family: "Times New Roman", Times, serif;
+	font-size: medium;
+	color: #FF0000;
+}		
+.oyHeader{
+	padding: 8px;
+	color: #FFFFFF;
+	background-color: #CC003D;
+}
+.oyHeaderTitle{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 125%; 
+	font-weight: bold;
+}
+.oyHeaderDesc{
+	font-family: "Times New Roman", Times, serif;
+	font-weight: normal;
+	font-size: 90%;
+}	
+.oyFooter{ 
+	background-color: #F7F7FF;
+	padding: 1px;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 70%;
+}
+.oyFrame {
+	border-collapse: collapse;
+    /* float: left; */
+    display: inline-block;
+    width: 62%;
+}	
+.oyCopyright{
+	padding-top: 4px;
+	font-size: 60%;
+}
+.oyOuterFrame {
+	padding: 12px;
+	background-color: #FFFFFF;
+	border:2px #EAEAEA; border-style:solid;
+    -moz-border-radius: 10px 0px 10px 0px;
+    -webkit-border-radius: 10px 0px 10px 0px;
+    -o-border-radius: 10px 0px 10px 0px;
+    border-radius: 10px 0px 10px 0px;
+    margin-top:30px;
+}
+A.oysTextLink{
+	color: #4282B5;
+	text-decoration: none;
+}
+A.oysTextLink:hover{
+	color: #808080;
+	text-decoration: underline;
+}
+.oyMenuAction {		
+	padding: 8px;
+	color: #000000; 
+	background-color: #dae5ff;
+	font-size: medium;
+	border: solid 1px #b5b5b5;
+    border-radius: 4px;
+    box-shadow: rgba(0,0,0,0.5) 5px 5px 5px;
+} 
+.oyMenuActionDis {		
+	padding-left: 4px;
+	padding-right: 4px;
+	color: #808080; 
+	background-color: #E0E0E0;
+	font-size: medium;
+	border: solid 1px #808080;	
+} 	
+.oyMenuActionNone{
+	color: #000000; 
+	font-size: 14px;
+    padding: 10px;
+    /*max-width: 320px;*/
+    display: block;
+}
+A.oyMenuAction {
+	text-decoration: none;
+}	
+A.oyMenuActionDis {
+	text-decoration: none;
+}		
+A.oyMenuAction:hover {
+	background-color: #6699FF;
+	border: solid 1px #808080;	
+}	
+.oyListCell { 
+}	
+.oyListCellDot {
+	background-color: #F7F7FF;
+	color: #F9F9F9;	
+}
+.oyPanelDiv {
+	background-color: #F7F7FF;
+	padding: 1px;
+}	
+.oyPanelDivHidden {
+	width: 2px;
+	background-color: #FFFFFF;
+}	
+.oyList {
+	cursor: pointer;
+	font-size: 90%;
+	/*width: 100%;*/
+} 	
+.oyListSpacer{
+	background-color: #E0E0E0;
+	height: 1px; 
+}	
+.oyListNormal {
+	padding: 2px;
+	color: #737573;
+}
+.oyListNormal:hover {
+    color: #050505;
+    background-color: #f8ffc6;
+}
+.oyListSel {
+	padding: 2px;
+	color: #000000;
+	background-color: #E0E0E0;
+}		 
+.oyCellInput {     
+	border: none;	
+	background-color: transparent;
+	
+	font-size: 12px;
+	font-family: Courier New, monospace;
+	font-weight: bold;
+	text-align: center;
+
+	width: 16px;
+	height: 16px;
+}
+.oyCellEmpty {
+	/*border: solid 1px #f6f6f6;*/
+	background-color: #F7F7FF;
+
+	font-size: 12px;
+	font-family: Courier New, monospace;
+	font-weight: bold;
+	text-align: center;
+
+	width: 16px;
+	height: 16px;
+}
+.oyCellFull{
+	border: solid 1px #003366;
+	background-color: #FFFFFF;
+
+	font-size: 12px;
+	font-family: Courier New, monospace;
+	font-weight: bold;
+	text-align: center;
+
+	width: 16px;
+	height: 16px;
+}
+.oyCellRevealed {
+	border: solid 1px #003366;
+	background-color: #FFC0C0;
+
+	font-size: 12px;
+	font-family: Courier New, monospace;
+	font-weight: bold;
+	text-align: center;
+
+	width: 16px;
+	height: 16px;
+}
+.oyCellGuessed {
+	border: solid 1px #003366;
+	background-color: #C0FFC0;
+
+	font-size: 12px;
+	font-family: Courier New, monospace;
+	font-weight: bold;
+	text-align: center;
+
+	width: 16px;
+	height: 16px;
+}
+.oyCellFocused {
+	border: solid 1px #003366;
+	background-color: #FFFFBB;
+
+	font-size: 12px;
+	font-family: Courier New, monospace;
+	font-weight: bold;
+	text-align: center;
+
+	width: 16px;
+	height: 16px;
+}
+.oyCellActive {
+	border: solid 1px #003366;
+	background-color: #6699FF;
+
+	font-size: 12px;
+	font-family: Courier New, monospace;
+	font-weight: bold;
+	text-align: center;
+
+	width: 16px;
+	height: 16px;
+}
+#retroalimentacion{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.9em;
+    color: #23314e;
+    text-align: center;
+}

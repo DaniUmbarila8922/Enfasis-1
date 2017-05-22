@@ -3,12 +3,12 @@
 <html lang="es">
  
 <head>
-<title>Etapa uno</title>
+<title>Etapa dos</title>
 
 <link rel="shortcut icon" href="/favicon.ico" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" href="css/styles.css" />
-
+<link rel="stylesheet" href="css/base.css" />
 </head>
  
 <body>
@@ -18,10 +18,50 @@
 			<img src="img/nina.png" alt="">
 		</div>	
 		<div class="sopadeletras">
-			
+			<div id="oygContext">
+
+    <div id="datos">
+        <div class="oyListCell" id="oygListH"></div>
+        <div class="oyListCell" id="oygListV"></div>
+    </div>
+    <div class="oyFrame">
+        <table class="oyFrame" style="display: none">
+            <tr class="oyHeader">
+                <td class="oyHeader">
+                    <div id="oygHeader"></div>
+                </td>
+                <td>
+                    <div id="oygHeaderMenu"></div>
+                </td>
+            </tr>
+        </table>
+
+        <div class="oyPuzzleCell">
+            <div class="oyPuzzle" id="oygPuzzle"></div>
+            <div class="oyPuzzleFooter" id="oygPuzzleFooter"></div>
+            <div id="oygState"></div>
+        </div>
+
+    </div>
+    <div id="oygStatic" style="display: none;"></div>
+    <div id="oygFooter" style="display: none;"></div>
+</div>
 		</div>
 	</div>	
 </div>
-
+<!-- archivos javascript. conservar orden -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+<script type="text/javascript" src="js/crucigrama/oyPrologue.js"></script>
+<script type="text/javascript" src="js/crucigrama/oyJsrAjax.js"></script>
+<script type="text/javascript" src="js/crucigrama/oyClue.js"></script>
+<script type="text/javascript" src="js/crucigrama/oyMenu.js"></script>
+<script type="text/javascript" src="js/crucigrama/oyPuzzle.js"></script>
+<script type="text/javascript" src="js/crucigrama/oyServer.js"></script>
+<script type="text/javascript" src="js/crucigrama/oySign.js"></script>
+<script type="text/javascript" src="js/crucigrama/oyMisc.js"></script>
+<!-- Mio -->
+<script type="text/javascript" src="js/crucigrama/codigoCrucigrama.js"></script>
+<!-- here we instantiate the puzzle and bind it to the HTML template above and show it to the user -->
+<script type="text/javascript" src="js/crucigrama/oyEpilogue.js"></script>
 </body>
 </html>
