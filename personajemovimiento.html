@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<TITLE>The Canvas Tag</TITLE>
+	</HEAD>
+
+	<BODY>
+
+	<HEADER>
+		<P>Press TAB to begin, W, A, S, D keys to move</P>
+	</HEADER>
+
+	<SECTION style="border-style: solid; border-width: 2px; width: 500px;">
+		<CANVAS WIDTH="500" HEIGHT="400" ID="canvas_1" tabindex="0">
+			Canvas tag not supported
+		</CANVAS>
+	</SECTION>
+
+	<SCRIPT>
+		var canvas = document.getElementById("canvas_1");
+		canvas.addEventListener('keydown', doKeyDown, true);
+
+		canvas_context = canvas.getContext("2d");
+		canvas_context.fillRect(100, 100, 50, 30);
+
+		var x = 100;
+		var y = 100;
+
+		function doKeyDown(e){
+
+			//====================
+			//	THE W KEY
+			//====================
+			if (e.keyCode == 87) {
+				clearCanvas();
+				y = y - 10;
+				canvas_context.fillRect(x, y, 50, 30);
+			}
+
+			//====================
+			//	THE S KEY
+			//====================
+			if (e.keyCode == 83) {
+				clearCanvas();
+				y = y + 10;
+				canvas_context.fillRect(x, y, 50, 30);
+			}
+
+			//====================
+			//	THE A KEY
+			//====================
+			if (e.keyCode == 65) {
+				clearCanvas();
+				x = x - 10;
+				canvas_context.fillRect(x, y, 50, 30);
+			}
+
+			//====================
+			//	THE D KEY
+			//====================
+			if (e.keyCode == 68) {
+				clearCanvas();
+				x = x + 10;
+				canvas_context.fillRect(x, y, 50, 30);
+			}
+
+		}
+
+		function clearCanvas() {
+			canvas.width = canvas.width;
+		}
+
+
+	</SCRIPT>
+
+	</BODY>
+</HTML>
+
+
+
+<!-- otro -->
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Test Move Object</title>
+
+    <script type="text/javascript">
+
+            function leftArrowPressed() {
+            var element = document.getElementById("image1");
+            element.style.left = parseInt(element.style.left) - 5 + 'px';
+            }
+
+            function rightArrowPressed() {
+            var element = document.getElementById("image1");
+            element.style.left = parseInt(element.style.left) + 5 + 'px';
+
+            }
+
+            function upArrowPressed() {
+            var element = document.getElementById("image1");
+            element.style.top = parseInt(element.style.top) - 5 + 'px';
+            }
+
+            function downArrowPressed() {
+            var element = document.getElementById("image1");
+            element.style.top = parseInt(element.style.top) + 5 + 'px';
+            }
+
+            function moveSelection(evt) {
+                switch (evt.keyCode) {
+                    case 37:
+                    leftArrowPressed();
+                    break;
+                    case 39:
+                    rightArrowPressed();
+                    break;
+                    case 38:
+                    upArrowPressed();
+                    break;
+                    case 40:
+                    downArrowPressed();
+                    break;
+                    }
+                };
+
+        function docReady()
+        {
+          
+          window.addEventListener('keydown', moveSelection);
+        }
+
+  </script>
+  </head>
+
+  <body onload="docReady()" onkeydown="" onkeyup="" bgcolor='yellow'>
+   Test
+  <img id="image1" src="http://placekitten.com/69/69" style="position:absolute;left:0; top:0;" height="15" width="15">
+  </body>
+   end html
+</html>
+
+
+<!-- otro -->
+
+<div id="character"></div>
+    /// store key codes and currently pressed ones
+    var keys = {};
+        keys.UP = 38;
+        keys.LEFT = 37;
+        keys.RIGHT = 39;
+        keys.DOWN = 40;
+
+    /// store reference to character's position and element
+    var character = {
+      x: 100,
+      y: 100,
+      speedMultiplier: 2,
+      element: document.getElementById("character")
+    };
+
+    /// key detection (better to use addEventListener, but this will do)
+    document.body.onkeyup = 
+    document.body.onkeydown = function(e){
+      if (e.preventDefault) { 
+        e.preventDefault();
+      }
+      else {
+        e.returnValue = false; 
+      }
+      var kc = e.keyCode || e.which;
+      keys[kc] = e.type == 'keydown';
+    };
+
+    /// character movement update
+    var moveCharacter = function(dx, dy){
+      character.x += (dx||0) * character.speedMultiplier;
+      character.y += (dy||0) * character.speedMultiplier;
+      character.element.style.left = character.x + 'px';
+      character.element.style.top = character.y + 'px';
+    };
+
+    /// character control
+    var detectCharacterMovement = function(){
+      if ( keys[keys.LEFT] ) {
+        moveCharacter(-1, 0);
+      }
+      if ( keys[keys.RIGHT] ) {
+        moveCharacter(1, 0);
+      }
+      if ( keys[keys.UP] ) {
+        moveCharacter(0, -1);
+      }
+      if ( keys[keys.DOWN] ) {
+        moveCharacter(0, 1);
+      }
+    };
+
+    /// update current position on screen
+    moveCharacter();
+
+    /// game loop
+    setInterval(function(){
+      detectCharacterMovement();
+    }, 1000/24);
+
+    #character {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background: red;
+}
+
