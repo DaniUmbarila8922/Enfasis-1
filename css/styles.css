@@ -308,24 +308,36 @@ canvas {
   padding: 8% 0;
 }
 .introduccion h1{
-	padding: 10% 0 5% 0;
+letter-spacing: -0.5px;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 39px;
+    text-align: left;
     color: #fff;
-    font-size: 35px;
     text-transform: uppercase;
-    color: #333;
 }
 .introduccion span{
 	color: #fff;
-	padding: 0 0 0% 0;
 	display: block;
-	font-size: 15px;
-  text-align: justify;
-  color: #333;
-  padding: 0 3%;
+    line-height: 31px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    text-align: justify;
+    padding-right: 5%;
 }
 .introduccion iframe{
 	width: 100%;
     height: 400px;
+}
+.introduccion nav li a{
+  color: #fff;
+}
+.introduccion .footer li{
+  color: #fff;
+}
+.introduccion .boton{
+  color: #fff;
+  border: 1px solid #fff;
 }
 .personaje, .sopadeletras{
 	display: inline-block;
@@ -441,6 +453,15 @@ width: 33%;
   text-align: center;
 
 }
+.introduccion{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 90%;
+    margin: 0 auto;
+    background: transparent;
+}
 @media (max-width: 1025px){
   .texthistoria, .franjagris{
     width: 100%;
@@ -492,6 +513,9 @@ width: 33%;
   }
   .franjagris h2{
     font-size: 30px;
+  }
+  div.introduccion div.mitad{
+    width: 100%;
   }
 
 }
