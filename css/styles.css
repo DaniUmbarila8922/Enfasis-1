@@ -83,7 +83,7 @@ a{
   }
   .botondescarga span{
     display: inline-block;
-    max-width: 92%;
+    max-width: 84%;
     vertical-align: middle;
     font-size: 13px;
     color: #333;
@@ -107,6 +107,7 @@ a{
   .mision p, .vision p{
         font-family: 'Open Sans', sans-serif;
     font-size: 20px;
+    text-align: justify;
   }
   .iconotexto{
     display: inline-block;
@@ -219,6 +220,9 @@ iframe {
   position: relative;
   padding: 12% 0;
   margin: 7% 0;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
 }
 .fondoimagen:before{
   content: '';
@@ -232,10 +236,24 @@ iframe {
 .fondoimagen p{
   color: #fff;
   font-size: 20px;
-    line-height: 28px;
+    position: relative;
+        z-index: 9;
+    top: 28%;
+    text-align: justify;
+}
+.imagencentrada{
+  margin: 0 auto;
+  display: block;
+  padding: 5% 0;
 }
 .textosolo{
   text-align: justify;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+.pfranjagris{
+  padding: 1% 5%;
+    text-align: justify;
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
 }
@@ -412,4 +430,37 @@ button::-moz-focus-inner {
 .historia h1{
   text-align: center;
 
+}
+@media (max-width: 1025px){
+  .franjapdf, .texthistoria, .franjagris{
+    width: 100%;
+    height: inherit;
+  }
+  .bannerprincipal img {
+    padding-top: 0;
+  }
+  .historia h1{
+    font-size: 34px;
+  }
+  .textodividido, .footer li, .footer li:nth-child(3){
+    width: 100%;
+    text-align: left;
+  }
+  nav{
+    margin: 10px 0;
+  }
+  nav ul li {
+    width: 100%;
+    text-align: left;
+    border-left: 2px solid #ffb960;
+    margin: 5px 0;
+  }
+  nav ul li a{
+    padding-left: 10px;
+  }
+  .iconotexto, .textoladoicono, .videos li{
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
