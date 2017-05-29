@@ -15,9 +15,13 @@ a{
     display: inline-block;
     min-width: 19%;
     text-transform: uppercase;
-    padding: 3% 0;
+    
     margin-bottom: 1%;
     text-align: center;
+  }
+  nav li a{
+    padding: 16% 0;
+    border-top: 1px solid #fff; 
   }
   nav li a, .categoria{
   text-decoration: none;
@@ -26,6 +30,10 @@ a{
     font-style: normal;
     font-size: 13px;
     display: block;
+  }
+  nav li :hover, .active{
+    color: #FFB960;
+    border-top: 1px solid #FFB960;
   }
   .texthistoria, .franjapdf, .textodividido {
     display: inline-block;
@@ -330,7 +338,7 @@ canvas {
   max-width: 100%;
 }
 .sopadeletras{    
-  width: 73%;
+  width: 100%;
 }
 .coloruno{
 	background-color: #E87686;
@@ -351,11 +359,11 @@ canvas {
 
 /* style for each square in the puzzle */
 #puzzle .puzzleSquare {
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   text-transform: uppercase;
-  background-color: white;
-  border: 0;
+  background-color: #ffb960;
+  border: 1px solid rgba(0, 0, 0, 0.09);
   font: 1em sans-serif;
 }
 
@@ -365,7 +373,7 @@ button::-moz-focus-inner {
 
 /* indicates when a square has been selected */
 #puzzle .selected {
-  background-color: orange;
+  background-color: #f2f2f2;
 }
 
 /* indicates that the square is part of a word that has been found */ 
@@ -398,9 +406,10 @@ button::-moz-focus-inner {
   -webkit-column-gap: 0;
   column-count: 2;
   column-gap: 0;
-  width: 44%;
-  display: inline-block;
-  vertical-align: top;
+width: 33%;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 8%;
 }
 
 #words ul {
@@ -408,8 +417,9 @@ button::-moz-focus-inner {
 }
 
 #words li {
-  padding: 3px 0;
-  font: 1em sans-serif;
+    padding: 10px 0;
+    font: 1em sans-serif;
+    list-style-type: disc;
 }
 
 /* indicates that the word has been found */
@@ -432,9 +442,12 @@ button::-moz-focus-inner {
 
 }
 @media (max-width: 1025px){
-  .franjapdf, .texthistoria, .franjagris{
+  .texthistoria, .franjagris{
     width: 100%;
     height: inherit;
+  }
+  .franjapdf{
+    width: 100%;
   }
   .bannerprincipal img {
     padding-top: 0;
@@ -456,11 +469,29 @@ button::-moz-focus-inner {
     margin: 5px 0;
   }
   nav ul li a{
-    padding-left: 10px;
+    padding: 10px;
   }
   .iconotexto, .textoladoicono, .videos li{
     width: 100%;
     padding-right: 0;
     padding-left: 0;
   }
+  #puzzle, div#oygContext {
+    width: 100%;
+  }
+  #puzzle .puzzleSquare {
+    height: 38px;
+    width: 7%;
+  }
+  .botonnaranja{
+        float: none;
+  }
+  #words{
+        column-count: 1;
+        -webkit-column-count: 1;
+  }
+  .franjagris h2{
+    font-size: 30px;
+  }
+
 }

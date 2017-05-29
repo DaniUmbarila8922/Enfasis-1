@@ -3,30 +3,140 @@
 <html lang="es">
  
 <head>
-<title>Etapa uno</title>
+<title>Historia uno</title>
 
 <link rel="shortcut icon" href="/favicon.ico" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link rel="stylesheet" href="css/styles.css" />
+</head>
+ 
+<body>
+<header>
+	<nav>
+	<div class="contenedor">
+		<ul>
+			<li>
+				<a href="historiauno.html" >Historia Uno</a>
+			</li>
+			<li>
+				<a href="historiados.html">Historia Dos</a>
+			</li>
+			<li>
+				<a href="historiatres.html" class="active">Historia Tres</a>
+			</li>
+			<li>
+				<a href="historiacuatro.html">Historia Cuatro</a>
+			</li>
+			<li>
+				<a href="historiacinco.html">Historia Cinco</a>
+			</li>
+		</ul>		
+	</div>
+	</nav>
+</header>
+<div class="contenedor">
+	<div class="historia">
+		<div class="texthistoria">
+			<h1>Resuelve la siguiente sopa de letras</h1>
+			<span class="categoria">DESCRIPCIÓN CORTA</span>
+			<p>
+				En la sopa de letras que encontraras a continuación, esta compuesta de filas y columnas donde
+				hay palabras realacionadas con los visto anteriormente.
+				<br>
+				- En la parte izquierda encontraras las palabras a encontrar	
+				<br>
+				- En la parte derecha encontraras la sopa de letras en las cuales estan las palabras mencionadas 
+				anteriormente
+				<br>
+				- Finalmente dar click en el enlace de "Siguiente"
+				<br>
+				<a href="pdf/DECRETO_DE-ESTRUCTURA_DEL_CENTRO.pdf" class="botondescarga" target="_blank"> <img src="img/ico-download.png" alt=""> <span>DECRETO DE ESTRUCTURA DEL CMH AQUÍ</span></a>
+			</p>	
+		</div>
+		<div class="franjapdf">
+			<iframe width="1053" height="550" src="https://www.youtube.com/embed/bfswoSjiRAM" frameborder="0" allowfullscreen></iframe>
+
+		</div>
+	</div>
+	<div class="mision">
+		<h2> <span> Pasos a tener en cuenta </span> </h2>
+		 
+		
+		
+			
+			<p>
+			<span class="ico-checked"><img src="img/ico-checked.png" alt=""></span>
+			Leer la lista en la parte izquierda		
+			</p>
+			<br>
+			<p>
+			<span class="ico-checked"><img src="img/ico-checked.png" alt=""></span>
+			Encontrar las palabras en la sopa de letras	
+			</p>
+			<br>
+			<p>
+			<span class="ico-checked"><img src="img/ico-checked.png" alt=""></span>
+			Mantener presionada la letra inicial de la palabra encontrada hasta la letra final de la palabra para 
+			sub brayarla.
+			</p>
+			<br>
+			<p>
+			<span class="ico-checked"><img src="img/ico-checked.png" alt=""></span> 
+			Al encontrar todas las palabras, dar click en el enlace de "Siguiente"	
+			
+			<br>
+			<br>
+						</p>
+			<br>	
+		
+		
+	</div>
+	<div class="vision">
+		<h2> <span> Sopa de letras </span> </h2>
+		<div class="sopadeletras">
+			<div id='puzzle'></div>
+			<div id='words'></div>
+			<a href="etapa2.html" class="botonnaranja"> <span>Siguiente </span> <img src="img/ico-next.png" alt=""></a>
+		</div>
+	</div>
+	<hr>
+	<div class="recomendados">
+
+		<div class="franjagris">
+		<h2>Videos Recomendados</h2>
+			<ul class="videos">
+				<li>
+					
+					<iframe width="561" height="315" src="https://www.youtube.com/embed/_zplczkMGlk" frameborder="0" allowfullscreen></iframe>
+					<span class="categoria">Construcción espiritual del Museo Nacional de Memoria Histórica</span>
+				</li>
+				<li>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/tAsJ95uz0Cs" frameborder="0" allowfullscreen></iframe>
+					<span class="categoria">Confinados: el caso de Samaniego El Grupo Regional de Memoria Histórica</span>
+				</li>
+				<li>
+				<iframe width="561" height="315" src="https://www.youtube.com/embed/YntpaRpNets" frameborder="0" allowfullscreen></iframe>
+				<span class="categoria">Archivos para la memoria (Lengua de señas)</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<footer>
+<div class="contenedor">
+	<ul class="footer">
+		<li>COPYRIGHT © 2017 BY COLOMBIA VIVE</li>
+		<li><img src="img/ico-mail.png" alt=""> <a href="mailto:natalia.beltran.ca@gmail.com"> CONTACTO</a></li>
+		<li>PROYECTO COLOMBIA VIVE</li>
+	</ul>	
+</div>
+
+</footer>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
 <script type="text/javascript" src="js/sopadeletras/wordfind.js"></script> 
 <script type="text/javascript" src="js/sopadeletras/wordfindgame.js"></script> 
 <script type="text/javascript" src="js/sopadeletras/funciones.js"></script> 
-</head>
- 
-<body>
-
-<div class="coloruno">	
-	<div class="contenedor">
-		<div class="personaje">
-			<img src="img/nina.png" alt="">
-		</div>	
-		<div class="sopadeletras">
-			<div id='puzzle'></div>
-			<div id='words'></div>
-			<a href="etapa2.html"> Siguiente etapa --></a>
-		</div>
-	</div>	
-</div>
+<script type="text/javascript" src="js/introduccion/funciones.js"></script>
 </body>
 </html>

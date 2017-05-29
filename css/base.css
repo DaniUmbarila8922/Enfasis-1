@@ -325,3 +325,9 @@ A.oyMenuAction:hover {
     color: #23314e;
     text-align: center;
 }
+.oyFrame{
+    width: initial;
+  }
+  div#oygListH div, .oyPanelDiv div {
+    padding: 8px 12px;
+}
